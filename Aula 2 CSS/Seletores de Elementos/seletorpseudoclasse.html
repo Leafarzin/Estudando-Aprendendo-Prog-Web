@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <style>
+         a:link {    /* pseudo-classe p/ link NÃO VISITADO */
+         color: red;
+         }
+         a:visited { /* pseudo-classe p/ link VISITADO*/
+         color: green;
+         }
+         a:hover {   /* pseudo-classe p/ MOUSE SOBRE o link */
+         color: hotpink;
+         }
+         a:active {   /* pseudo-classe p/ link SELECIONADO*/
+         color: blue;
+         }
+      </style>
+   </head>
+   <body>
+      <h2>Estilo para link, dependendo do seu estado</h2>
+      <p><b><a href="default.asp" target="_blank">Este é um link</a></b></p>
+      <dl>
+         <dt>
+            <p><b>Importante 1:</b>
+         </dt>
+         <dd><b>a:hover</b> DEVE vir depois de <b>a:link</b> e <b>a:visited</b>, para ser efetivo no CSS.</dd>
+         <dt>
+            <p><b>Importante 2:</b> 
+         </dt>
+         <dd><b>a:active</b> DEVE vir depois de <b>a:hover</b>, para ser efetivo no CSS.</dd>
+      </dl>
+   </body>
+</html>
