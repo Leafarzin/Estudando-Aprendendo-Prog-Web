@@ -1,0 +1,135 @@
+/* --- 1. FUNDO DO UNIVERSO ANIMADO --- */
+body {
+  margin: 0;
+  padding: 40px 20px;
+  color: #f8fafc; /* Texto em branco puro para máxima nitidez */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000000; /* Fundo totalmente preto */
+
+  /* Estrelas do universo geradas via gradiente */
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(1.5px 1.5px at 60px 90px, #e2e8f0, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 120px 40px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 160px 140px, #cbd5e1, rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 250px 250px;
+  animation: moverUniverso 35s linear infinite;
+}
+
+@keyframes moverUniverso {
+  from { background-position: 0 0; }
+  to { background-position: 500px 1000px; }
+}
+
+/* --- 2. TÍTULO PRINCIPAL DO TOPO --- */
+.titulo-topo {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 45px;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* --- 3. GRADE FLEXÍVEL (RESPONSIVA) --- */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- 4. ITEM DO CARD --- */
+.card-item {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Rótulos externos (ex 1, ex 2...) em branco limpo */
+.rotulo-exemplo {
+  font-size: 1.1rem;
+  margin: 0 0 8px 12px;
+  color: #ffffff;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* --- 5. BLOCOS COM CANTOS ARREDONDADOS E TOM CINZA/PRETO --- */
+.bloco {
+  background-color: rgba(13, 13, 18, 0.9); /* Fundo preto/cinza bem escuro fosco */
+  border-radius: 20px; /* Cantos arredondados solicitados */
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Linha de contorno sutil em branco translúcido */
+  padding: 25px;
+  height: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+}
+
+/* --- 6. ELEMENTOS INTERNOS E TIPOGRAFIA --- */
+.subtitulos {
+  color: #38bdf8; /* Azul claro para destacar limpo sem roxo */
+  margin-top: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+p, li, dt, dd {
+  color: #cbd5e1; /* Cinza claro suave para leitura confortável */
+}
+
+a {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px;
+  text-align: left;
+  color: #f1f5f9;
+}
+
+th {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+input[type="text"] {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: #050508;
+  color: #ffffff;
+  width: 85%;
+}
+
+input[type="submit"] {
+  background-color: #ffffff; /* Botão em branco limpo para destacar */
+  color: #000000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+input[type="submit"]:hover {
+  background-color: #38bdf8; /* Vira azul claro ao passar o mouse */
+  color: #ffffff;
+}

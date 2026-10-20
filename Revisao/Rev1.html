@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Página de Revisão</title>
+
+
+  <style>
+    /*   Comentário CSS: Os elementos HTML: */
+    table,
+    /* "table" (tag para iniciar tabela),   */
+    th,
+    /* "th"    (tag para coluna cabeçalho) e */
+    td {
+      /* "td     (tag para coluna), terão como formatação: */
+      border: 1px solid black;
+      /* borda de 1 pixel, em linha cheia e na cor preta*/
+    }
+  </style> <!-- Fecha a seção </style>, dentro da seção de cabeçalho do HTM -->
+
+  </head>
+
+<body>
+      <h1>Maior time do Brasil</h1>
+
+    <img src="figuras/download.png" alt="Imagem 1" width="200" height="150" />
+
+    <h2>Corinthians</h2>
+    <p><strong>negrito</strong></p>
+    <p><i>Italico</i></p>
+    <a href="https://www.corinthians.com.br" target="_blank">Site do Coringao</a>
+
+    
+    <h4>Lista de Definição</h4>
+  <dl>
+    <dt>Café</dt>
+    <dd>- Bebida quente, produzida a partir dos grãos torrados do cafeeiro.</dd>
+    <dt>Chá</dt>
+    <dd>- Bebida quente, preparada pela infusão de folhas. </dd>
+    <dt>Leite</dt>
+    <dd>- Bebida gelada branca. </dd>
+  </dl>
+
+  <h3>Campos de entrada do tipo SUBMIT BUTTON</h3>
+  <form action="https://www.w3schools.com/action_page.php" target="_self">
+    <label for="pname">Digite seu nome:</label><br>
+    <input type="text" id="pnome" name="pnome" value="Maria"><br>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+
+  <h4>Tabela Exemplo 1</h4>
+  <table width="40%"> <!-- Atributo width (largura) = % da tela do navegador. -->
+
+    <!-- // define a primeira linha da tabela, com 4 colunas (th) -->
+    <tr>
+      <!-- // define o cabeçalho da tabela, com 4 colunas (th) -->
+      <th>Nomes Melhores times</th>
+      <th>Idade</th>
+      <th>Cor</th>
+      <th>Tamanho</th>
+    </tr>
+
+    <tr>
+      <!-- // define os dados da tabela, uma resposta para cada coluna horizontal (td) -->
+      <th>corintia</th> <!-- apenas para teste para ver se funciona o th tbm, mas o certo é td -->
+
+      <td>29</td>
+      <td>roxo</td>
+      <td>abuabu</td>
+    </tr>
+
+    <tr>
+      <td>sfasf</td>
+      <td>10</td>
+      <td>Branco</td>
+      <td>ssss</td>
+    </tr>
+  </table>
+<hr>
+
+</body>
+
+</html>

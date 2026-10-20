@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    background-color: #6B6F77; /* Coloque a cor de fundo aqui no body */
+    color: white; /* Coloque a cor do texto aqui no body */
+    text-align: center; /* Centraliza o texto no body */
+}
+
+.bloco{
+    background-color: #3C3F45; /* Coloque a cor de fundo aqui no bloco */
+    padding: 20px; /* Adiciona espaçamento interno no bloco */
+    border-radius: 12px; /* Adiciona bordas arredondadas no bloco */
+    text-align: left; /* Centraliza o texto no bloco */
+    display: block; /* Faz o bloco se ajustar ao conteúdo */
+
+}
+.grid-layout {
+    display: grid; /* Define o container como um grid */
+    grid-template-columns: 250px 1fr; /* Uma coluna de 250px e outra que ocupa o resto */
+    gap: 20px; /* Espaço entre os blocos */
+}
+.coluna-direita {
+    display: flex;
+    flex-direction: column; /* Empilha os blocos um em cima do outro */
+    gap: 20px; /* Espaço entre o Exemplo 2 e o Exemplo 3 */
+}
