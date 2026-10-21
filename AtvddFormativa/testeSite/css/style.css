@@ -1,0 +1,28 @@
+/* 1. Registra a fonte Neuropol X no seu CSS */
+@font-face {
+    font-family: 'NeuropolX';
+    src: url('../Neuropol X Rg.otf') format('opentype');
+}
+
+/* 1. Tira as bolinhas da lista e coloca os itens um do lado do outro (esquerda para a direita) */
+nav ul {
+    list-style: none;  /* Remove as bolinhas pretas */
+    display: flex;     /* Alinha os itens na horizontal */
+    gap: 17px;         /* Cria um espaço proporcional entre 'home', 'sobre' e 'contato' */
+    padding: 0;
+    margin: 0;
+}
+
+/* 2. Aplica a fonte com o estilo e o peso exato da referência */
+nav ul li a {
+    font-family: 'NeuropolX', sans-serif; /* Fonte limpa e técnica */
+    font-weight: bold;                  /* Deixa o traço encorpado */
+    font-size: 13px;                    /* Ajusta o tamanho proporcional */
+    color: #111827;                     /* Cor escura e marcante */
+    text-decoration: none;              /* Tira o sublinhado padrão do link */
+    
+}
+
+
+
+
