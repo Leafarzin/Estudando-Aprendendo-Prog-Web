@@ -1,0 +1,11 @@
+// Exemplo conceitual do script js/recebe-dados.js
+
+// 1. Pega os parâmetros passados na URL (?nomeUsuario=João...)
+const parametros = new URLSearchParams(window.location.search);
+
+// 2. Extrai os valores usando o atributo 'name' dos campos do formulário
+const nome = parametros.get('nomeUsuario');
+const email = parametros.get('emailUsuario');
+
+// 3. Exibe os valores dentro de elementos da página HTML
+document.getElementById('mensagem').textContent = `Obrigado, ${nome}! Seu e-mail (${email}) foi cadastrado com sucesso.`;
