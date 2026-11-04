@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Barbearia Navalha</title>
+
+  <!-- link do CSS com caminho relativo (pasta css) -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- mesmo menu das outras páginas, aqui o "ativo" fica em Sobre -->
+  <nav class="menu">
+    <a href="index.html">Início</a>
+    <a href="form.html">Agendar</a>
+    <a href="formAction.html">Confirmação</a>
+    <a class="ativo" href="about.html">Sobre</a>
+  </nav>
+
+  <main class="conteudo">
+    <h1>Sobre o site</h1>
+
+    <!-- apresentação do trabalho -->
+    <section class="bloco-sobre">
+      <h2>O projeto</h2>
+      <p>Site da Barbearia Navalha, feito para a Atividade Somativa 1 de Programação Web, usando apenas HTML, CSS e JavaScript.</p>
+    </section>
+
+    <!-- autor -->
+    <section class="bloco-sobre">
+      <h2>Autor</h2>
+      <p>Rafael, estudante de ADS PUCPR.</p>
+    </section>
+
+    <!-- tecnologias: ao clicar num item, o JS liga/desliga a classe "destaque" -->
+    <section class="bloco-sobre">
+      <h2>Tecnologias usadas</h2>
+      <ul id="lista-tec">
+        <li>HTML: estrutura das páginas</li>
+        <li>CSS: visual, menu e layout</li>
+        <li>JavaScript: pop-up, máscara e leitura do GET</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- CORREÇÃO: agora carrega o about.js, e não o script.js -->
+  <script src="script/about.js"></script>
+
+</body>
+</html>

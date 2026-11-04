@@ -1,31 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Início | Meu Site</title>
-    <!-- Caminho relativo para o CSS -->
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <title>Barbearia Navalha</title>
+
+  <!-- link do CSS com caminho relativo (pasta css) -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-    <!-- Menu Padrão (igual em todas as páginas) -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="form.html">Contato / Formulário</a></li>
-                <li><a href="about.html">Sobre</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- menu: igual em todas as páginas, só muda a classe "ativo" -->
+  <nav class="menu">
+    <a class="ativo" href="index.html">Início</a>
+    <a href="form.html">Agendar</a>
+    <a href="formAction.html">Confirmação</a>
+    <a href="about.html">Sobre</a>
+  </nav>
 
-    <main>
-        <h1>Bem-vindo ao meu site!</h1>
-        <p>Esta é a página inicial do projeto demonstrativo.</p>
-    </main>
+  <main class="conteudo">
 
-    <!-- Caminho relativo para o JavaScript -->
-    <script src="js/main.js"></script>
+    <h1>Barbearia Navalha</h1>
+    <p>Corte, barba e estilo desde 2015.</p>
+
+    <!-- section agrupa o assunto "serviços" -->
+    <section class="servicos">
+      <h2>Nossos serviços</h2>
+
+      <!-- div que segura os cartões, o CSS deixa lado a lado -->
+      <div class="lista-cartoes">
+
+        <!-- cada serviço é um article com foto, nome e preço -->
+        <article class="cartao">
+          <img src="img/corte1.jpg" alt="Corte de cabelo">
+          <h3>Corte Thomas Shelby</h3>
+          <p>R$ 40,00</p>
+          <!-- data-detalhe guarda o texto que aparece no pop-up -->
+          <button class="botao-info" data-detalhe="Corte de Cabelo inspirado na serie Peaky Blinders feito na máquina. Duração: 40 min.">Saiba mais</button>
+        </article>
+
+        <article class="cartao">
+          <img src="img/corte2.jpg" alt="Barba">
+          <h3>Corte Lacoste</h3>
+          <p>R$ 30,00</p>
+          <button class="botao-info" data-detalhe="Corte de Cabelo inspirado em um Lagarto. Duração: 50 min.">Saiba mais</button>
+        </article>
+
+        <article class="cartao">
+          <img src="img/corte4.jpg" alt="Barba">
+          <h3>Corte 67</h3>
+          <p>R$ 30,00</p>
+          <button class="botao-info" data-detalhe="Corte de um meme Atual com ele sendo 67. Duração: 67 min.">Saiba mais</button>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- pop-up: começa escondido pelo CSS e o JS mostra quando clica em "Saiba mais" -->
+  <div id="janela" class="janela">
+    <span id="fechar">X</span>
+    <p id="texto-janela"></p>
+  </div>
+
+  <!-- script no final, com caminho relativo (pasta script) -->
+  <script src="script/script.js"></script>
 </body>
 </html>

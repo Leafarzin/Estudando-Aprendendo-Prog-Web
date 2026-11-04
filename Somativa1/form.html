@@ -1,10 +1,78 @@
-<!-- Exemplo conceitual do formulário -->
-<form action="formAction.html" method="GET" id="meuFormulario">
-  <label for="nome">Nome:</label>
-  <input type="text" id="nome" name="nomeUsuario">
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Barbearia Navalha</title>
 
-  <label for="email">E-mail:</label>
-  <input type="email" id="email" name="emailUsuario">
+    <!-- link do CSS com caminho relativo (pasta css) -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-  <button type="submit">Enviar</button>
-</form>
+  <body>
+    <!-- mesmo menu das outras páginas, aqui o "ativo" fica em Agendar -->
+    <nav class="menu">
+      <a href="index.html">Início</a>
+      <a class="ativo" href="form.html">Agendar</a>
+      <a href="formAction.html">Confirmação</a>
+      <a href="about.html">Sobre</a>
+    </nav>
+
+    <main class="conteudo">
+      <h1>Agende seu horário</h1>
+
+      <!-- action: página que recebe os dados / method GET: manda os dados pela URL -->
+      <form class="formulario" action="formAction.html" method="GET">
+        <!-- nome: required + pattern (expressão regular), só letras, de 3 a 50 -->
+        <label for="nome">Nome</label>
+        <input
+          type="text"
+          id="nome"
+          name="nome"
+          required
+          pattern="[A-Za-zÀ-ÿ\s]{3,50}"
+          title="Use de 3 a 50 letras"
+        />
+
+        <!-- e-mail: o type="email" já valida o formato -->
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required />
+
+        <!-- celular: pattern no formato (xx) xxxxx-xxxx -->
+        <label for="celular">Celular</label>
+        <input
+          type="tel"
+          id="celular"
+          name="celular"
+          required
+          pattern="\(\d{2}\) \d{5}-\d{4}"
+          placeholder="(41) 99999-9999"
+          title="Formato: (41) 99999-9999"
+        />
+
+        <!-- serviço: select obrigatório, a primeira opção vazia força a escolha -->
+        <label for="servico">Serviço</label>
+        <select id="servico" name="servico" required>
+          <option value="">Selecione...</option>
+          <option value="Corte">Corte</option>
+          <option value="Barba">Barba</option>
+          <option value="Combo">Combo</option>
+        </select>
+
+        <!-- data: obrigatória, o JS define o mínimo como hoje -->
+        <label for="data">Data</label>
+        <input type="date" id="data" name="data" required />
+
+        <!-- termos: só envia se estiver marcado -->
+        <label class="termos">
+          <input type="checkbox" name="termos" required />
+          Concordo com os termos
+        </label>
+
+        <button type="submit" class="botao-info">Agendar</button>
+      </form>
+    </main>
+
+    <!-- script desta página: data mínima e máscara do celular -->
+    <script src="script/form.js"></script>
+  </body>
+</html>

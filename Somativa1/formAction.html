@@ -1,11 +1,35 @@
-// Exemplo conceitual do script js/recebe-dados.js
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Barbearia Navalha</title>
 
-// 1. Pega os parâmetros passados na URL (?nomeUsuario=João...)
-const parametros = new URLSearchParams(window.location.search);
+  <!-- link do CSS com caminho relativo (pasta css) -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
 
-// 2. Extrai os valores usando o atributo 'name' dos campos do formulário
-const nome = parametros.get('nomeUsuario');
-const email = parametros.get('emailUsuario');
+<body>
 
-// 3. Exibe os valores dentro de elementos da página HTML
-document.getElementById('mensagem').textContent = `Obrigado, ${nome}! Seu e-mail (${email}) foi cadastrado com sucesso.`;
+  <!-- mesmo menu das outras páginas, aqui o "ativo" fica em Confirmação -->
+  <nav class="menu">
+    <a href="index.html">Início</a>
+    <a href="form.html">Agendar</a>
+    <a class="ativo" href="formAction.html">Confirmação</a>
+    <a href="about.html">Sobre</a>
+  </nav>
+
+  <main class="conteudo">
+    <h1>Agendamento recebido</h1>
+
+    <!-- os spans começam vazios, o JS preenche com os dados que vieram na URL -->
+    <p>Nome: <span id="r-nome"></span></p>
+    <p>E-mail: <span id="r-email"></span></p>
+    <p>Celular: <span id="r-celular"></span></p>
+    <p>Serviço: <span id="r-servico"></span></p>
+    <p>Data: <span id="r-data"></span></p>
+  </main>
+
+  <!-- script que lê os dados do GET -->
+  <script src="script/acao.js"></script>
+</body>
+</html>
