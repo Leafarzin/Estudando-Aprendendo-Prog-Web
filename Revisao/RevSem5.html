@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: sans-serif;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            background-color: #4c82af;
+            color: white;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1>Controle de Cor</h1>
+    <p id="mensagem">O Estado atual do fundo é: Original</p>
+    <button id="botao">Mudar Cor</button>
+    <p id ="contador-cliques">Contador: 0</p>
+
+
+
+    <script>
+let contador = 0;
+
+document.getElementById('botao').addEventListener('click', function() {
+    contador++;
+    document.getElementById('contador-cliques').textContent = 'Contador: ' + contador;
+
+    let corAtual = document.body.style.backgroundColor;
+
+    if (corAtual === 'lightblue') {
+        document.body.style.backgroundColor = 'lightgreen';
+        document.getElementById('mensagem').textContent = 'O Estado atual do fundo é: Verde';
+    } else if (corAtual === 'lightgreen') {
+        document.body.style.backgroundColor = 'white';
+        document.getElementById('mensagem').textContent = 'O Estado atual do fundo é: Branco';
+    } else {
+        document.body.style.backgroundColor = 'lightblue';
+        document.getElementById('mensagem').textContent = 'O Estado atual do fundo é: Azul';
+    }
+});
+    </script>
+</body> 
+</html>
