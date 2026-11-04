@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    
+    <ul id="listaHabilidades"></ul>
+    <button id="btnCarregar">Carregar Competências</button>
+
+    <script>
+        const habilidades = ["HTML5 Avançado", "CSS Grid & Flexbox", "JavaScript Básico/Interativo", "Git & GitHub"];
+
+            document.getElementById("btnCarregar").addEventListener('click', function(){
+                const lista = document.getElementById("listaHabilidades")
+                
+                let htmlItens = "";
+
+                for (let i = 0; i < habilidades.length; i++){
+
+                    htmlItens += "<li>" + habilidades[i] + "</li>";
+
+                }
+
+                lista.innerHTML = htmlItens;
+
+            });
+
+    </script>
+
+
+
+
+ 
+    
+</body>
+</html>

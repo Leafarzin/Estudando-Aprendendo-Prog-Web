@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <button id="meuBotao">Clique aqui</button> 
+    <p id="textoStatus">Status: Aguardando clique</p>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        document.getElementById('meuBotao').addEventListener('click', function() {
+            document.getElementById('textoStatus').textContent = "Status: Ligado!";            
+        });
+
+    });
+
+    </script>
+
+
+
+ 
+    
+</body>
+</html>
