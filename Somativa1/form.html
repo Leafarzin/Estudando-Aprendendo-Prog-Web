@@ -13,7 +13,7 @@
     <nav class="menu">
       <a href="index.html">Início</a>
       <a class="ativo" href="form.html">Agendar</a>
-      <a href="formAction.html">Confirmação</a>
+      <a href="formAction.php">Confirmação</a>
       <a href="about.html">Sobre</a>
     </nav>
 
@@ -21,7 +21,7 @@
       <h1>Agende seu horário</h1>
 
       <!-- action: página que recebe os dados / method GET: manda os dados pela URL -->
-      <form class="formulario" action="formAction.html" method="GET">
+      <form class="formulario" action="formAction.php" method="POST">
         <!-- nome: required + pattern (expressão regular), só letras, de 3 a 50 -->
         <label for="nome">Nome</label>
         <input
