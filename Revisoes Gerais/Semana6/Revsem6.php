@@ -8,7 +8,7 @@
 
     <style>
         body {
-            background-color: BlueViolet;
+            background-color: gray;
             text-align: center;
         }
 
